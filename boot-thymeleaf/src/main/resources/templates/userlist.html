@@ -6,19 +6,21 @@
 <title>Insert title here</title>
 </head>
 <body>
-<table>
-	<thread>
-	<tr>
-	<th>Id</th><th>Name</th><th>Company</th>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+		<th scope="col">번호</th>
+		<th scope="col">이름</th>
+		<th scope="col">회사</th>
 	</tr>
-	</thread>
-	<tbody>
-		<tr th:each="user : ${users}">
-			<td th:text="${user.id}">id</td>
-			<td th:text="${user.name}">name</td>
-			<td th:text="${user.company}">company</td>
-		</tr>
-	</tbody>
+</thead>
+  <tbody>
+	<tr th:each="user : ${users}">
+		<td th:text="${user.id}">Id</td>
+		<td th:text="${user.name}">Id</td>
+		<td th:text="${user.company}">Id</td>
+	</tr>
+</tbody>
 </table>
 </body>
 </html>

@@ -11,8 +11,8 @@ import javax.persistence.Table;
 public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
-	// database에서  sequence number, primary key 역할 
+	private Long id; 
+	// database에서 sequence number, primary key 역할
 	
 	private String name;
 	private String company;
@@ -35,5 +35,7 @@ public class User {
 	public void setCompany(String company) {
 		this.company = company;
 	}
-
+	
+	
+	
 }
