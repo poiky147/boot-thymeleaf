@@ -20,6 +20,11 @@ import idu.cs.repository.UserRepository;
 public class HomeController {
 	@Autowired UserRepository userRepo; // Dependency Injection
 	
+	@GetMapping("/")
+	public String welcome(Model model) {
+		return "welcome";
+	}
+	
 	@GetMapping("/test")
 	public String home(Model model) {
 		model.addAttribute("test", "인덕 컴소");
@@ -50,7 +55,7 @@ public class HomeController {
 		return "welcome";
 	}
 	
-	@GetMapping("/register")
+	@GetMapping("/regform")
 	public String loadRegForm(Model model) {		
 		return "regform";
 	}	
